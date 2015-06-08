@@ -21,6 +21,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -71,7 +72,7 @@ public class PushCenter {
         data.setPayload(payload);
 
         Notification notification = new Notification();
-        notification.setAlert("Hello World!");
+        notification.setAlert("Current Time: " + new Date());
         notification.setAndroid(data);
 
         PushRequest push = new PushRequest();
